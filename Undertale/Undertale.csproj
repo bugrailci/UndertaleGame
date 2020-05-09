@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D8437D39-41A1-494C-85EE-F4F3873B252B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Undertale</RootNamespace>
+    <AssemblyName>Undertale</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>undertale.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Hybat.cs" />
+    <Compile Include="GreenPotion.cs" />
+    <Compile Include="Soulfire.cs" />
+    <Compile Include="Direction.cs" />
+    <Compile Include="Dungeon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dungeon.Designer.cs">
+      <DependentUpon>Dungeon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enemy.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Floweyface.cs" />
+    <Compile Include="Error.cs" />
+    <Compile Include="IPotion.cs" />
+    <Compile Include="ISprite.cs" />
+    <Compile Include="Paintbrush.cs" />
+    <Compile Include="Mover.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dungeon.resx">
+      <DependentUpon>Dungeon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="StartingMenu.resx">
+      <DependentUpon>StartingMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RedPotion.cs" />
+    <Compile Include="StartingMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartingMenu.Designer.cs">
+      <DependentUpon>StartingMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sword.cs" />
+    <Compile Include="Weapon.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dungeon600x400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ghoul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ghost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\potion_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\potion_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\underworld1.png" />
+    <None Include="Resources\underworld.png" />
+    <None Include="Resources\range.png" />
+    <None Include="Resources\range1.png" />
+    <None Include="Resources\player.png" />
+    <None Include="Resources\sword.png" />
+    <None Include="Resources\Regular_polygon_42.svg.png" />
+    <None Include="Resources\red_pot.png" />
+    <None Include="Resources\green_pot.png" />
+    <None Include="Resources\flowey_head.png" />
+    <None Include="Resources\floweyface.png" />
+    <None Include="Resources\Hybat.png" />
+    <None Include="Resources\soulfire.png" />
+    <None Include="Resources\BACKGROUND.png" />
+    <None Include="Resources\Inventoryborder.png" />
+    <None Include="Resources\pngwing.com.png" />
+    <None Include="Resources\BACKGROUND1.png" />
+    <None Include="Resources\BACKGROUND2.png" />
+    <None Include="Resources\dungeon_preview_dribbble.gif" />
+    <None Include="Resources\dungeon_preview_dribbble1.gif" />
+    <None Include="Resources\Dungeon2.png" />
+    <None Include="Resources\Dungeon21.png" />
+    <None Include="Resources\Dungeon22.png" />
+    <None Include="Resources\paintbrush.png" />
+    <None Include="Resources\underlogo.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\798722.png" />
+    <None Include="bin\Debug\maintheme.wav" />
+    <None Include="Resources\main1.gif" />
+    <None Include="Resources\main2.gif" />
+    <None Include="Resources\startbuttonblue.png" />
+    <None Include="Resources\startpng.png" />
+    <None Include="Resources\exitico.png" />
+    <None Include="Resources\exiticoblue.png" />
+    <Content Include="undertale.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
